@@ -8,8 +8,8 @@ const imageShortcode = async (
 	relativeSrc,
 	alt,
 	className,
-	widths = [null, 400, 800, 1280],
 	formats = ['jpeg', 'webp'],
+	widths = [null, 400, 800, 1280],
 	sizes = '100vw'
 ) => {
 	const { dir: imagDir } = path.parse(relativeSrc)

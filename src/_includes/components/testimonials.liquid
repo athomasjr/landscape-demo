@@ -1,0 +1,21 @@
+<section id="testimonials">
+	<div class="bg-background-jet my-container section-py flex flex-col items-center gap-12 md:gap-20 xl:gap-24 2xl:gap-28 ">
+		<h2 class="text-background-white text-center">
+			What Our Customers <span class="text-primary-green">Are Saying</span>
+		</h2>
+		<div class="max-w-6xl flex flex-col gap-20 lg:gap-28">
+			{% for test in testimonials %}
+			<div class="flex flex-col md:flex-row gap-6 lg:gap-16">
+				<div>
+					{% image test.image test.alt _ 'png' %}
+				</div>
+				<div class="md:{{test.order}} flex flex-col gap-6  max-w-xs lg:max-w-lg md:self-center">
+					<p class="text-background-white">{{test.text}}</p>
+					<p class="font-semibold text-background-white text-xl">{{test.name}}</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		</div>
+	</div>
+</section>
