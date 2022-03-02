@@ -1,0 +1,19 @@
+<header
+	class="hidden md:flex lg:px-36 lg:h-20 h-16 justify-between items-center absolute border-2 border-solid border-red-500 w-full px-10"
+>
+	{{ '/src/assets/svgs/lawnr-logo-white-min.svg' | svgContents }}
+	<nav>
+		<ul class="flex text-background-white gap-5 lg:gap-6">
+			{% for link in navLinks %}
+			<li>
+				<a href="{{ link.url }}">{{ link.text }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</nav>
+	<a
+		href="/#contact"
+		class="bg-background-white px-3 py-2.5 px bg-opacity-30 text-background-white rounded-full"
+		>Get In Touch</a
+	>
+</header>
