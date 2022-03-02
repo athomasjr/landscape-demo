@@ -1,10 +1,7 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
 	content: ['./src/**/*.liquid'],
 	theme: {
-		fontFamily: {
-			sans: ['Source Sans Pro', 'sans-serif'],
-		},
-
 		extend: {
 			backgroundImage: {
 				hero: `url('/assets/images/hero-min.jpeg')`,
@@ -14,6 +11,12 @@ module.exports = {
 				'background-jet': '#31302B',
 				'primary-dark-green': '#22613E',
 				'primary-green': '#358A35',
+				'accents-red': '#E35E5E',
+			},
+
+			fontFamily: {
+				sans: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
+				logo: ['Poppins', 'sans-serif'],
 			},
 		},
 	},
