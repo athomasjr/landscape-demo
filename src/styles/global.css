@@ -459,6 +459,42 @@ h2{
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.my-container{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 768px){
+
+  .my-container{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+@media (min-width: 1280px){
+
+  .my-container{
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+@media (min-width: 1536px){
+
+  .my-container{
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
+}
+.section-py{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 1024px){
+
+  .section-py{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
 .absolute{
   position: absolute;
 }
@@ -482,9 +518,6 @@ h2{
 }
 .w-full{
   width: 100%;
-}
-.basis-2\/6{
-  flex-basis: 33.333333%;
 }
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -513,25 +546,17 @@ h2{
 .gap-6{
   gap: 1.5rem;
 }
-.self-center{
-  align-self: center;
+.gap-12{
+  gap: 3rem;
+}
+.gap-8{
+  gap: 2rem;
+}
+.scroll-smooth{
+  scroll-behavior: smooth;
 }
 .rounded-full{
   border-radius: 9999px;
-}
-.border{
-  border-width: 1px;
-}
-.border-2{
-  border-width: 2px;
-}
-.border-red-400{
-  --tw-border-opacity: 1;
-  border-color: rgb(248 113 113 / var(--tw-border-opacity));
-}
-.border-blue-600{
-  --tw-border-opacity: 1;
-  border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 .bg-primary-dark-green{
   --tw-bg-opacity: 1;
@@ -540,6 +565,10 @@ h2{
 .bg-background-white{
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+.bg-background-jet{
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 48 43 / var(--tw-bg-opacity));
 }
 .bg-opacity-30{
   --tw-bg-opacity: 0.3;
@@ -565,10 +594,6 @@ h2{
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.px-14{
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -576,10 +601,6 @@ h2{
 .py-2\.5{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-}
-.py-12{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 .text-center{
   text-align: center;
@@ -591,6 +612,14 @@ h2{
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .font-black{
   font-weight: 900;
@@ -610,6 +639,10 @@ h2{
   --tw-text-opacity: 1;
   color: rgb(49 48 43 / var(--tw-text-opacity));
 }
+.text-primary-green{
+  --tw-text-opacity: 1;
+  color: rgb(53 138 53 / var(--tw-text-opacity));
+}
 .underline-offset-2{
   text-underline-offset: 2px;
 }
@@ -620,21 +653,16 @@ h2{
     display: flex;
   }
 
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
   .md\:gap-6{
     gap: 1.5rem;
   }
 
-  .md\:self-center{
-    align-self: center;
-  }
-
-  .md\:justify-self-center{
-    justify-self: center;
-  }
-
-  .md\:px-14{
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
+  .md\:gap-16{
+    gap: 4rem;
   }
 
   .md\:text-4xl{
@@ -653,33 +681,28 @@ h2{
     flex-direction: row;
   }
 
-  .lg\:justify-start{
-    justify-content: flex-start;
-  }
-
   .lg\:gap-6{
     gap: 1.5rem;
-  }
-
-  .lg\:gap-8{
-    gap: 2rem;
   }
 
   .lg\:gap-10{
     gap: 2.5rem;
   }
 
+  .lg\:gap-8{
+    gap: 2rem;
+  }
+
   .lg\:self-center{
     align-self: center;
   }
 
-  .lg\:justify-self-center{
-    justify-self: center;
+  .lg\:pb-24{
+    padding-bottom: 6rem;
   }
 
-  .lg\:py-28{
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+  .lg\:pb-56{
+    padding-bottom: 14rem;
   }
 
   .lg\:text-6xl{
@@ -694,9 +717,12 @@ h2{
     gap: 4rem;
   }
 
-  .xl\:px-28{
-    padding-left: 7rem;
-    padding-right: 7rem;
+  .xl\:gap-24{
+    gap: 6rem;
+  }
+
+  .xl\:pb-60{
+    padding-bottom: 15rem;
   }
 
   .xl\:text-3xl{
@@ -711,8 +737,7 @@ h2{
     gap: 10rem;
   }
 
-  .\32xl\:px-36{
-    padding-left: 9rem;
-    padding-right: 9rem;
+  .\32xl\:gap-28{
+    gap: 7rem;
   }
 }

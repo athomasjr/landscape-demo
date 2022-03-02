@@ -13,6 +13,7 @@ module.exports = {
 				'background-white': '#F5F5F5',
 				'background-jet': '#31302B',
 				'primary-dark-green': '#22613E',
+				'primary-green': '#358A35',
 			},
 		},
 	},

@@ -1,0 +1,21 @@
+<section id="work">
+	<div
+		class="bg-background-jet my-container section-py lg:pb-56 xl:pb-60 flex flex-col items-center gap-12 md:gap-16 xl:gap-24 2xl:gap-28"
+	>
+		<h2 class="text-background-white">
+			Our
+			<span class="text-primary-green">Work</span>
+		</h2>
+
+		<div class="flex flex-col md:flex-row gap-8">
+			{% for project in projects %}
+			<div class="flex flex-col items-center gap-4">
+				{% image project.image project.alt%}
+				<p class="text-background-white font-semibold text-xl">
+					{{ project.service }}
+				</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
