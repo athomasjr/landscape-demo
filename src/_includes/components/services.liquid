@@ -1,0 +1,32 @@
+<section id="services">
+	<div
+		class="px-8 md:px-14 xl:px-28 2xl:px-36 py-12 lg:py-28 flex flex-col lg:flex-row gap-16 xl:gap-16 2xl:gap-40"
+	>
+		<div class="flex flex-col gap-6 lg:gap-10 lg:self-center">
+			<div class="flex flex-col gap-4 md:gap-6 lg:gap-8">
+				<h2 class="text-primary-dark-green">Industry Leading Service</h2>
+				<p class="text-background-jet">
+					Our team of experts offers top-tier landscaping services that will
+					transform your outdoor space into a paradise. From garden design to
+					lawn care, we can take care of everything for you. Our services are
+					reliable, affordable, and tailored to your specific needs. Let us help
+					you create the perfect outdoor space for relaxing, entertaining, or
+					simply enjoying nature.
+				</p>
+			</div>
+			<a href="#" class="text-primary-dark-green underline-offset-2">
+				More Services &rarr;</a
+			>
+		</div>
+
+		{% for service in services %}
+		<div class="flex flex-col gap-4">
+			{%image service.image service.alt %}
+			<h3 class="text-primary-dark-green font-semibold text-2xl xl:text-3xl">
+				{{ service.heading }}
+			</h3>
+			<p>{{ service.text }}</p>
+		</div>
+		{% endfor %}
+	</div>
+</section>
