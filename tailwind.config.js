@@ -12,6 +12,8 @@ module.exports = {
 				'primary-dark-green': '#22613E',
 				'primary-green': '#358A35',
 				'accents-red': '#E35E5E',
+				'accents-orange': '#FF9738',
+				'mint-cream': '#F2F7F0',
 			},
 
 			fontFamily: {
