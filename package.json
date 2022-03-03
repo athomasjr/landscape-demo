@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "concurrently --kill-others \"npm run tailwind:process\" \"npm run serve\"",
 		"serve": "eleventy --serve",
-		"build": "eleventy",
+		"build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss src/styles/tailwind.css --o _site/styles/global.css && cleancss _site/styles/global.css -o _site/styles/global.css",
 		"tailwind:process": "npx postcss src/styles/tailwind.css --o src/styles/global.css --watch"
 	},
 	"keywords": [],
@@ -17,12 +17,15 @@
 		"@11ty/eleventy-img": "^1.1.0",
 		"@11ty/eleventy-navigation": "^0.3.2",
 		"autoprefixer": "^10.4.2",
+		"clean-css-cli": "^5.5.2",
 		"concurrently": "^7.0.0",
+		"html-minifier": "^4.0.0",
 		"postcss": "^8.4.7",
 		"postcss-cli": "^9.1.0",
 		"tailwindcss": "^3.0.23"
 	},
 	"dependencies": {
+		"alpinejs": "^3.9.1",
 		"eleventy-plugin-svg-contents": "^0.7.0"
 	}
 }

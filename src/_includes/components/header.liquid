@@ -1,0 +1,96 @@
+<style>
+	[x-cloak] {
+		display: none !important;
+	}
+</style>
+
+<script>
+	function navigation() {
+		return {
+			isOpen: false,
+			open() {
+				this.isOpen = !this.isOpen
+				if (this.isOpen && typeof window !== 'undefined' && window.document) {
+					document.body.style.overflow = 'hidden'
+				}
+				if (!this.isOpen) {
+					document.body.style.overflow = 'unset'
+				}
+			},
+		}
+	}
+</script>
+
+<h1 x-show="isOpen">test</h1>
+
+<header
+	x-cloak
+	x-data="navigation"
+	class="my-container md:hidden absolute w-full py-2"
+>
+	<div class="flex justify-between items-center">
+		<a href="/">
+			<h1 class="text-background-white font-logo font-medium text-xl">
+				Lawnr<span class="text-accents-red text-3xl">.</span>
+			</h1>
+		</a>
+
+		<div @click="open" class="flex flex-col gap-1 z-50">
+			<div
+				class="w-5 h-0.5 duration-200"
+				:class="isOpen ? 'bg-red-500 rotate-45 ': 'bg-background-white'"
+			></div>
+			<div
+				class="w-5 h-0.5"
+				:class="isOpen ? 'hidden': 'bg-background-white'"
+			></div>
+			<div
+				class="w-5 h-0.5 duration-200"
+				:class="isOpen ? 'bg-red-500 -rotate-45 -translate-y-1.5 ': 'bg-background-white'"
+			></div>
+		</div>
+	</div>
+	<nav
+		x-show="isOpen"
+		class="bg-background-white fixed inset-0 my-container flex flex-col items-center justify-center"
+		x-transition:enter="transition ease-in-out duration-300"
+		x-transition:enter-start="opacity-0 transform scale-x-0 -translate-x-1/2"
+		x-transition:enter-end="opacity-100 transform scale-x-100 translate-x-0"
+		x-transition:leave="transition ease-in-out duration-300"
+		x-transition:leave-start="opacity-100 transform scale-x-100 translate-x-0"
+		x-transition:leave-end="opacity-0 transform scale-x-0 -translate-x-1/2"
+	>
+		<ul class="flex flex-col text-center text-background-jet gap-5 lg:gap-6">
+			{% for link in navLinks %}
+			<li>
+				<a href="{{ link.url }}">{{ link.text }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</nav>
+</header>
+
+<header>
+	<!-- * Mobile -->
+
+	<!-- * Desktop -->
+	<div
+		class="my-container hidden md:flex lg:h-20 h-16 justify-between items-center absolute w-full"
+	>
+		{{ '/src/assets/svgs/lawnr-logo-white-min.svg' | svgContents }}
+		<nav>
+			<ul class="flex text-background-white gap-5 lg:gap-6">
+				{% for link in navLinks %}
+				<li>
+					<a href="{{ link.url }}">{{ link.text }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
+		<a
+			href="/#contact"
+			class="bg-background-white px-3 py-2.5 px bg-opacity-30 text-background-white rounded-full"
+			>Get In Touch</a
+		>
+	</div>
+</header>

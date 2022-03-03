@@ -3,6 +3,7 @@ const now = String(Date.now())
 const path = require('path')
 const svgContents = require('eleventy-plugin-svg-contents')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
+const htmlmin = require('html-minifier')
 
 const imageShortcode = async (
 	relativeSrc,
@@ -42,6 +43,20 @@ module.exports = (config) => {
 	config.addLiquidShortcode('image', imageShortcode)
 	config.addPassthroughCopy('src/styles/global.css')
 	config.addPassthroughCopy('src/assets')
+	config.addPassthroughCopy({
+		'./node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
+	})
+	config.addTransform('htmlmin', function (content, outputPath) {
+		if (outputPath && outputPath.endsWith('.html')) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+			})
+			return minified
+		}
+		return content
+	})
 	return {
 		dir: {
 			input: 'src',
