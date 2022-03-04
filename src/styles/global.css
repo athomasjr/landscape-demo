@@ -613,6 +613,9 @@ h2{
 .gap-5{
   gap: 1.25rem;
 }
+.gap-10{
+  gap: 2.5rem;
+}
 .gap-14{
   gap: 3.5rem;
 }
@@ -636,12 +639,6 @@ h2{
 }
 .gap-8{
   gap: 2rem;
-}
-.gap-7{
-  gap: 1.75rem;
-}
-.gap-10{
-  gap: 2.5rem;
 }
 .scroll-smooth{
   scroll-behavior: smooth;
@@ -724,9 +721,6 @@ h2{
 .pt-12{
   padding-top: 3rem;
 }
-.pb-3{
-  padding-bottom: 0.75rem;
-}
 .text-center{
   text-align: center;
 }
@@ -757,9 +751,6 @@ h2{
 }
 .font-black{
   font-weight: 900;
-}
-.font-bold{
-  font-weight: 700;
 }
 .text-background-jet{
   --tw-text-opacity: 1;
@@ -946,6 +937,10 @@ h2{
     flex-direction: row;
   }
 
+  .lg\:gap-44{
+    gap: 11rem;
+  }
+
   .lg\:gap-6{
     gap: 1.5rem;
   }
@@ -966,20 +961,16 @@ h2{
     gap: 4rem;
   }
 
-  .lg\:gap-44{
-    gap: 11rem;
-  }
-
   .lg\:self-center{
     align-self: center;
   }
 
-  .lg\:pb-56{
-    padding-bottom: 14rem;
-  }
-
   .lg\:pt-28{
     padding-top: 7rem;
+  }
+
+  .lg\:pb-56{
+    padding-bottom: 14rem;
   }
 
   .lg\:text-6xl{
@@ -1018,6 +1009,10 @@ h2{
     gap: 6rem;
   }
 
+  .xl\:gap-56{
+    gap: 14rem;
+  }
+
   .xl\:gap-48{
     gap: 12rem;
   }
@@ -1028,10 +1023,6 @@ h2{
 
   .xl\:gap-16{
     gap: 4rem;
-  }
-
-  .xl\:gap-56{
-    gap: 14rem;
   }
 
   .xl\:pt-52{
