@@ -937,10 +937,6 @@ h2{
     flex-direction: row;
   }
 
-  .lg\:gap-44{
-    gap: 11rem;
-  }
-
   .lg\:gap-6{
     gap: 1.5rem;
   }
@@ -1007,10 +1003,6 @@ h2{
 
   .xl\:gap-24{
     gap: 6rem;
-  }
-
-  .xl\:gap-56{
-    gap: 14rem;
   }
 
   .xl\:gap-48{

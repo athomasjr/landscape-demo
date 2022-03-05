@@ -63,7 +63,7 @@
 		<ul class="flex flex-col text-center text-background-jet gap-5 lg:gap-6">
 			{% for link in navLinks %}
 			<li>
-				<a href="{{ link.url }}">{{ link.text }}</a>
+				<a @click="open" href="{{ link.url }}">{{ link.text }}</a>
 			</li>
 			{% endfor %}
 		</ul>
